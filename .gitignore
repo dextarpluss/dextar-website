@@ -8,6 +8,8 @@ website/out/
 .env
 .env*.local
 *.env
+!.env.example
+!website/.env.example
 
 # Operating System Files
 .DS_Store
