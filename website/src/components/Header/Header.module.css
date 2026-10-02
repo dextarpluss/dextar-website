@@ -1,0 +1,140 @@
+.header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: rgba(7, 9, 14, 0.92);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(226, 232, 240, 0.1);
+  transition: all var(--dx-transition-normal);
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 76px;
+}
+
+.logoLink {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+}
+
+.logoImage {
+  height: 38px;
+  width: auto;
+  object-fit: contain;
+}
+
+.navDesktop {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.navLink {
+  color: var(--dx-text-light-muted);
+  font-size: 0.9375rem;
+  font-weight: 500;
+  transition: color var(--dx-transition-fast);
+  position: relative;
+  padding: 4px 0;
+}
+
+.navLink:hover,
+.navLinkActive {
+  color: var(--dx-cyan-400);
+}
+
+.navLinkActive::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--dx-cyan-400);
+  border-radius: 2px;
+}
+
+.ctaContainer {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.ctaButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px;
+  border-radius: var(--dx-radius-md);
+  background: linear-gradient(135deg, var(--dx-cyan-500) 0%, var(--dx-blue-600) 100%);
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 0.875rem;
+  box-shadow: var(--dx-shadow-sm);
+  transition: all var(--dx-transition-fast);
+  border: none;
+  cursor: pointer;
+}
+
+.ctaButton:hover {
+  transform: translateY(-1px);
+  box-shadow: var(--dx-shadow-glow-cyan);
+}
+
+.mobileMenuBtn {
+  display: none;
+  background: transparent;
+  border: 1px solid rgba(226, 232, 240, 0.2);
+  color: #ffffff;
+  width: 42px;
+  height: 42px;
+  border-radius: var(--dx-radius-sm);
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+/* Mobile overlay nav */
+.mobileNav {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 76px;
+  left: 0;
+  width: 100%;
+  background-color: var(--dx-navy-950);
+  border-bottom: 1px solid rgba(226, 232, 240, 0.15);
+  padding: 24px;
+  gap: 16px;
+  box-shadow: var(--dx-shadow-lg);
+}
+
+.mobileNavOpen {
+  display: flex;
+}
+
+.mobileNavLink {
+  color: var(--dx-text-light);
+  font-size: 1.0625rem;
+  font-weight: 500;
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+@media (max-width: 1024px) {
+  .navDesktop {
+    display: none;
+  }
+  
+  .mobileMenuBtn {
+    display: flex;
+  }
+}

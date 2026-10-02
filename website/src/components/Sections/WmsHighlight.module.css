@@ -1,0 +1,129 @@
+.section {
+  background-color: var(--dx-navy-950);
+  color: var(--dx-text-light);
+  padding: var(--dx-space-16) 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.header {
+  max-width: 760px;
+  margin-bottom: 48px;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #ffffff;
+  margin-top: 12px;
+  margin-bottom: 16px;
+}
+
+.subtitle {
+  font-size: 1.125rem;
+  color: var(--dx-text-light-muted);
+  line-height: 1.6;
+}
+
+/* WMS 6-step Flow Grid */
+.flowGrid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 16px;
+  margin-bottom: 48px;
+}
+
+.stepCard {
+  background-color: var(--dx-navy-900);
+  border: 1px solid rgba(6, 182, 212, 0.2);
+  border-radius: var(--dx-radius-lg);
+  padding: 20px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  position: relative;
+  transition: transform var(--dx-transition-fast), border-color var(--dx-transition-fast);
+}
+
+.stepCard:hover {
+  transform: translateY(-4px);
+  border-color: var(--dx-cyan-400);
+  box-shadow: var(--dx-shadow-glow-cyan);
+}
+
+.stepNumber {
+  font-size: 0.8125rem;
+  font-weight: 700;
+  color: var(--dx-cyan-400);
+  background: rgba(6, 182, 212, 0.12);
+  padding: 2px 8px;
+  border-radius: var(--dx-radius-sm);
+  width: fit-content;
+}
+
+.stepTitle {
+  font-size: 1.0625rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.stepDesc {
+  font-size: 0.8125rem;
+  color: var(--dx-text-light-muted);
+  line-height: 1.5;
+}
+
+.stepHighlight {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--dx-emerald-500);
+  margin-top: auto;
+  padding-top: 8px;
+  border-top: 1px dashed rgba(255, 255, 255, 0.1);
+}
+
+.wmsCtaRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: rgba(17, 34, 68, 0.6);
+  border: 1px solid rgba(6, 182, 212, 0.3);
+  border-radius: var(--dx-radius-xl);
+  padding: 28px 36px;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.wmsCtaText {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.wmsCtaBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 24px;
+  background: linear-gradient(135deg, var(--dx-cyan-500) 0%, var(--dx-blue-600) 100%);
+  color: #ffffff;
+  font-weight: 600;
+  border-radius: var(--dx-radius-md);
+  box-shadow: var(--dx-shadow-glow-cyan);
+}
+
+@media (max-width: 1200px) {
+  .flowGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .flowGrid {
+    grid-template-columns: 1fr;
+  }
+  .wmsCtaRow {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

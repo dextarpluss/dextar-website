@@ -1,0 +1,153 @@
+.section {
+  background-color: var(--dx-surface);
+  padding: var(--dx-space-16) 0;
+  border-bottom: 1px solid var(--dx-border);
+}
+
+.header {
+  max-width: 720px;
+  margin-bottom: 48px;
+}
+
+.title {
+  font-size: 2.25rem;
+  font-weight: 800;
+  color: var(--dx-text);
+  margin-top: 12px;
+  margin-bottom: 16px;
+}
+
+.subtitle {
+  font-size: 1.0625rem;
+  color: var(--dx-text-muted);
+  line-height: 1.6;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: flex-start;
+}
+
+/* Insight++ Card (Design System Standard) */
+.insightCard {
+  background-color: #ffffff;
+  border: 1px solid rgba(139, 92, 246, 0.3);
+  border-radius: var(--dx-radius-xl);
+  padding: 28px;
+  box-shadow: 0 10px 25px -5px rgba(139, 92, 246, 0.1), var(--dx-shadow-md);
+  position: relative;
+}
+
+.insightCardHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.insightCardTitle {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--dx-purple-500);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.insightContentBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.insightLabel {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--dx-text-muted);
+}
+
+.insightText {
+  font-size: 0.9375rem;
+  color: var(--dx-text);
+  line-height: 1.5;
+}
+
+.insightCardActions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding-top: 16px;
+  border-top: 1px solid var(--dx-border);
+}
+
+.actionCyan {
+  background-color: var(--dx-cyan-500);
+  color: #ffffff;
+  padding: 8px 16px;
+  border-radius: var(--dx-radius-md);
+  font-size: 0.875rem;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+}
+
+.actionSecondary {
+  background-color: var(--dx-surface-soft);
+  color: var(--dx-text);
+  padding: 8px 16px;
+  border-radius: var(--dx-radius-md);
+  font-size: 0.875rem;
+  font-weight: 500;
+  border: 1px solid var(--dx-border);
+}
+
+/* Capacidades Grid (Direita) */
+.capabilitiesList {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.capabilityCard {
+  background: var(--dx-surface-soft);
+  border: 1px solid var(--dx-border);
+  border-radius: var(--dx-radius-lg);
+  padding: 18px 20px;
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  transition: border-color var(--dx-transition-fast);
+}
+
+.capabilityCard:hover {
+  border-color: var(--dx-purple-500);
+}
+
+.capabilityName {
+  font-size: 1.0625rem;
+  font-weight: 700;
+  color: var(--dx-text);
+}
+
+.capabilityTagline {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--dx-purple-500);
+}
+
+.capabilityDesc {
+  font-size: 0.875rem;
+  color: var(--dx-text-muted);
+  margin-top: 4px;
+}
+
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}

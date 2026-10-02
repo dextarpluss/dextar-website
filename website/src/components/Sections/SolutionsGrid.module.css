@@ -1,0 +1,159 @@
+.section {
+  background-color: var(--dx-surface-soft);
+  padding: var(--dx-space-16) 0;
+}
+
+.header {
+  text-align: center;
+  max-width: 680px;
+  margin: 0 auto 48px auto;
+}
+
+.title {
+  font-size: 2.25rem;
+  font-weight: 800;
+  color: var(--dx-text);
+  margin-top: 12px;
+  margin-bottom: 16px;
+}
+
+.subtitle {
+  font-size: 1.0625rem;
+  color: var(--dx-text-muted);
+}
+
+/* Pilares Principais (Destacados em 3 colunas) */
+.mainPillarsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  margin-bottom: 48px;
+}
+
+.pillarCard {
+  background-color: var(--dx-surface);
+  border: 1px solid var(--dx-border);
+  border-radius: var(--dx-radius-xl);
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: var(--dx-shadow-md);
+  transition: all var(--dx-transition-normal);
+  position: relative;
+  overflow: hidden;
+}
+
+.pillarCard:hover {
+  transform: translateY(-4px);
+  border-color: var(--dx-cyan-500);
+  box-shadow: var(--dx-shadow-lg);
+}
+
+.pillarCardHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.pillarTitle {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--dx-text);
+  margin-bottom: 8px;
+}
+
+.pillarSubtitle {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--dx-cyan-600);
+  margin-bottom: 12px;
+}
+
+.pillarDesc {
+  font-size: 0.9375rem;
+  color: var(--dx-text-muted);
+  line-height: 1.6;
+  margin-bottom: 24px;
+}
+
+.featureList {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 28px;
+  margin-top: auto;
+}
+
+.featureItem {
+  font-size: 0.875rem;
+  color: var(--dx-text);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.featureCheck {
+  color: var(--dx-cyan-500);
+  flex-shrink: 0;
+}
+
+.cardLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--dx-cyan-600);
+  font-weight: 600;
+  font-size: 0.9375rem;
+  transition: color var(--dx-transition-fast);
+}
+
+.cardLink:hover {
+  color: var(--dx-blue-600);
+}
+
+/* Ofertas Complementares (3 colunas menores) */
+.complementaryTitle {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--dx-text);
+  margin-bottom: 24px;
+}
+
+.compGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.compCard {
+  background: var(--dx-surface);
+  border: 1px solid var(--dx-border);
+  border-radius: var(--dx-radius-lg);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.compTitle {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--dx-text);
+}
+
+.compDesc {
+  font-size: 0.875rem;
+  color: var(--dx-text-muted);
+  line-height: 1.5;
+}
+
+@media (max-width: 1024px) {
+  .mainPillarsGrid {
+    grid-template-columns: 1fr;
+  }
+  .compGrid {
+    grid-template-columns: 1fr;
+  }
+}

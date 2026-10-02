@@ -1,0 +1,108 @@
+.section {
+  background-color: var(--dx-surface-soft);
+  padding: var(--dx-space-16) 0;
+  border-bottom: 1px solid var(--dx-border);
+}
+
+.header {
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto 48px auto;
+}
+
+.title {
+  font-size: 2.25rem;
+  font-weight: 800;
+  color: var(--dx-text);
+  margin-top: 12px;
+  margin-bottom: 16px;
+}
+
+.subtitle {
+  font-size: 1.0625rem;
+  color: var(--dx-text-muted);
+}
+
+/* Architecture Diagram Hub */
+.diagramWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.hubCenter {
+  background: var(--dx-navy-900);
+  border: 2px solid var(--dx-cyan-500);
+  color: #ffffff;
+  border-radius: var(--dx-radius-xl);
+  padding: 24px 40px;
+  text-align: center;
+  box-shadow: var(--dx-shadow-glow-cyan);
+  z-index: 2;
+  margin: 32px 0;
+}
+
+.hubTitle {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--dx-cyan-400);
+}
+
+.hubSub {
+  font-size: 0.8125rem;
+  color: var(--dx-text-light-muted);
+}
+
+.nodesGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  width: 100%;
+}
+
+.nodeCard {
+  background: var(--dx-surface);
+  border: 1px solid var(--dx-border);
+  border-radius: var(--dx-radius-lg);
+  padding: 20px;
+  text-align: center;
+  box-shadow: var(--dx-shadow-sm);
+  transition: all var(--dx-transition-fast);
+}
+
+.nodeCard:hover {
+  border-color: var(--dx-cyan-500);
+  transform: translateY(-2px);
+}
+
+.nodeTitle {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--dx-text);
+  margin-bottom: 6px;
+}
+
+.nodeDesc {
+  font-size: 0.8125rem;
+  color: var(--dx-text-muted);
+}
+
+.winthorNotice {
+  margin-top: 24px;
+  text-align: center;
+}
+
+@media (max-width: 900px) {
+  .nodesGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 500px) {
+  .nodesGrid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,209 @@
+.hero {
+  position: relative;
+  background-color: var(--dx-navy-950);
+  color: var(--dx-text-light);
+  padding-top: var(--dx-space-16);
+  padding-bottom: var(--dx-space-16);
+  overflow: hidden;
+  border-bottom: 1px solid rgba(226, 232, 240, 0.08);
+}
+
+.heroBackgroundGlow {
+  position: absolute;
+  top: -10%;
+  right: -5%;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(6, 182, 212, 0.15) 0%, rgba(59, 130, 246, 0.08) 50%, rgba(7, 9, 14, 0) 70%);
+  pointer-events: none;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: center;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.badgeContainer {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.title {
+  font-size: 3rem;
+  font-weight: 800;
+  line-height: 1.15;
+  color: #ffffff;
+  letter-spacing: -0.02em;
+}
+
+.titleHighlight {
+  background: linear-gradient(135deg, var(--dx-cyan-400) 0%, var(--dx-blue-400) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.subtitle {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--dx-cyan-400);
+}
+
+.description {
+  font-size: 1.0625rem;
+  line-height: 1.6;
+  color: var(--dx-text-light-muted);
+  max-width: 560px;
+}
+
+.ctaGroup {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-top: 8px;
+}
+
+.primaryBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 14px 28px;
+  background: linear-gradient(135deg, var(--dx-cyan-500) 0%, var(--dx-blue-600) 100%);
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 1rem;
+  border-radius: var(--dx-radius-md);
+  box-shadow: var(--dx-shadow-glow-cyan);
+  transition: all var(--dx-transition-fast);
+}
+
+.primaryBtn:hover {
+  transform: translateY(-2px);
+}
+
+.secondaryBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 14px 28px;
+  background: rgba(255, 255, 255, 0.05);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  font-weight: 600;
+  font-size: 1rem;
+  border-radius: var(--dx-radius-md);
+  transition: all var(--dx-transition-fast);
+}
+
+.secondaryBtn:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: var(--dx-cyan-400);
+}
+
+/* Visual Mockup/Graphic on Right */
+.visualWrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.visualCard {
+  width: 100%;
+  max-width: 540px;
+  background-color: var(--dx-navy-900);
+  border: 1px solid rgba(6, 182, 212, 0.25);
+  border-radius: var(--dx-radius-xl);
+  padding: 28px;
+  box-shadow: var(--dx-shadow-lg);
+}
+
+.visualHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: 16px;
+  margin-bottom: 20px;
+}
+
+.visualTitle {
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: var(--dx-cyan-400);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.statusDot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--dx-emerald-500);
+  box-shadow: 0 0 8px var(--dx-emerald-500);
+}
+
+.visualMetrics {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.metricBox {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  padding: 12px;
+  border-radius: var(--dx-radius-md);
+  text-align: center;
+}
+
+.metricLabel {
+  font-size: 0.75rem;
+  color: var(--dx-text-light-muted);
+  margin-bottom: 4px;
+}
+
+.metricVal {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.flowGraphic {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.flowRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 14px;
+  background: rgba(11, 24, 48, 0.8);
+  border-left: 3px solid var(--dx-cyan-500);
+  border-radius: var(--dx-radius-sm);
+  font-size: 0.8125rem;
+}
+
+@media (max-width: 1024px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .title {
+    font-size: 2.25rem;
+  }
+}

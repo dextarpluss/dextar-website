@@ -1,0 +1,40 @@
+.hero {
+  background-color: var(--dx-navy-950);
+  color: #ffffff;
+  padding: 80px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.title {
+  font-size: 2.75rem;
+  font-weight: 800;
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+
+.subtitle {
+  font-size: 1.125rem;
+  color: var(--dx-text-light-muted);
+  max-width: 680px;
+  line-height: 1.6;
+}
+
+.grid2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: center;
+}
+
+.cardDark {
+  background-color: var(--dx-navy-900);
+  border: 1px solid rgba(6, 182, 212, 0.3);
+  border-radius: var(--dx-radius-xl);
+  padding: 32px;
+}
+
+@media (max-width: 900px) {
+  .grid2 {
+    grid-template-columns: 1fr;
+  }
+}

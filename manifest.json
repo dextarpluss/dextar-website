@@ -1,0 +1,10 @@
+{
+  "project": "DEXTAR++ Website",
+  "version": "1.0",
+  "purpose": "handoff_to_specialized_ai",
+  "primary_prompt": "05_IMPLEMENTATION/PROMPT_MESTRE_PARA_IA.md",
+  "specification": "05_IMPLEMENTATION/DEXTAR_WEBSITE_SPECIFICATION_v1.0.md",
+  "content": "02_CONTENT/DEXTAR_WEBSITE_CONTENT_v1.0.md",
+  "design_system": "03_DESIGN_SYSTEM/DEXTAR_DIGITAL_DESIGN_SYSTEM_v1.0.md",
+  "validation_marker": "[VALIDAR]"
+}
